@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>From Jungle & Pair of 3 — Welcome</title>
+  <meta name="description" content="From Jungle & Pair of 3 — welcome — contact: fbferla@gmail.com" />
+  <style>
+    :root {
+      --bg: #0f1220;
+      --card: #161a2b;
+      --text: #e8eaf6;
+      --muted: #aab2d5;
+      --accent: #7c9cff;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: radial-gradient(1200px 800px at 10% 10%, #182040 0%, var(--bg) 50%),
+                  radial-gradient(1000px 700px at 90% 90%, #1b244c 0%, var(--bg) 60%);
+      color:var(--text);
+      font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+      display:grid;place-items:center;padding:32px;
+    }
+    .card{
+      width:min(780px,100%);background:color-mix(in srgb, var(--card) 95%, transparent);
+      border:1px solid rgba(255,255,255,.06);border-radius:16px;
+      padding:28px 28px 24px;box-shadow:0 20px 40px rgba(0,0,0,.35);backdrop-filter:blur(6px);
+    }
+    h1{margin:0 0 6px;font-size:clamp(24px,4vw,40px);letter-spacing:.5px}
+    h2{margin:8px 0 18px;font-weight:500;color:var(--muted);font-size:clamp(16px,2.4vw,20px)}
+    .pill{
+      display:inline-flex;gap:8px;align-items:center;background:rgba(124,156,255,.12);
+      color:var(--accent);border:1px dashed rgba(124,156,255,.35);
+      padding:6px 10px;border-radius:999px;font-size:13px
+    }
+    .grid{display:grid;gap:16px}
+    .row{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:14px 16px}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    footer{margin-top:16px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-label="Welcome page">
+    <div class="pill">From Jungle &nbsp;•&nbsp; Pair of 3</div>
+    <h1>Welcome</h1>
+    <h2>MathMania ARCADE — simple landing page for verification & contact</h2>
+
+    <section class="grid" aria-label="Content">
+      <div class="row">
+        <strong>Contact:</strong>
+        <div><a href="mailto:fbferla@gmail.com">fbferla@gmail.com</a></div>
+      </div>
+
+      <div class="row">
+        <strong>About:</strong>
+        <div>“From Jungle &amp; Pair of 3” — prototype / draft. Etc, etc, etc.</div>
+      </div>
+
+      <div class="row">
+        <strong>app-ads.txt:</strong>
+        <div>
+          Place the file at <span class="mono">/app-ads.txt</span> on this domain.<br>
+          Direct link: <a href="/app-ads.txt">https://fbferla.github.io/app-ads.txt</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="y"></span> FbFerla</span>
+      <span class="mono">fbferla.github.io</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
